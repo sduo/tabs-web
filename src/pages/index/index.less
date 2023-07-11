@@ -1,0 +1,48 @@
+.filter {
+    display: flex;
+    flex-direction: row;
+    align-content: center;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 1vh;
+    gap: 1vh;
+    :global {
+        .ant-space-item {
+            margin: 0 !important;
+        }
+        .ant-space-item:nth-child(2){
+            flex-grow: 1 !important;
+        }
+    }    
+}
+
+.main {
+    display: flex;   
+    flex-direction: column;   
+    margin: 0 1vh;
+    .item {        
+        .title {
+            margin-bottom: 0;
+        }
+        .actions {
+            :global {
+                .ant-space-item:first-child{
+                    margin-left: 8px;
+                }
+            }
+        }
+        :global{
+            .ant-card-body {
+                padding: 1vh !important;
+            }
+        }
+    }
+}
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 1vh;
+    gap: 5vw !important;
+}
