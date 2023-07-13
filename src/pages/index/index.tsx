@@ -177,7 +177,7 @@ const Index : React.FC = () => {
     onQuery();
   };
 
-  // 条目点击
+  // 点击打开
   const onClick = (row:Url) => {
     window.open(row.url,'_blank');
     onDeleteClick(row);
