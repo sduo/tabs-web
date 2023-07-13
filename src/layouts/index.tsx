@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
-import { useModel, Outlet, Access, useAccess, useIntl, setLocale ,history,getAllLocales, getLocale } from 'umi';
+import { useModel, Outlet, Access, useAccess, useIntl, setLocale ,history } from 'umi';
 import { App, ConfigProvider, Layout, Space, Select, Tag, Button, Typography, QRCode, ThemeConfig } from 'antd';
 import { Locale } from 'antd/lib/locale';
 import { LogoutOutlined, QrcodeOutlined } from '@ant-design/icons';
-import {globalConfig} from '../global';
+import { globalConfig } from '../global';
 import styles from './index.less';
 import LinkTag from '../models/link-tag';
 

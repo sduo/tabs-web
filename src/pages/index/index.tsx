@@ -177,12 +177,18 @@ const Index : React.FC = () => {
     onQuery();
   };
 
+  // 条目点击
+  const onClick = (row:Url) => {
+    window.open(row.url,'_blank');
+    onDeleteClick(row);
+  };
+
   // 列表渲染
   const onRender = (row: Url, index: number) => {
     return (<Card key={index} className={styles.item}>
       <Space direction="vertical">
-        <Typography.Link href={row.url} target="_blank" onClick={onDeleteClick.bind(this, row)} >
-          <Typography.Paragraph strong={true} className={styles.title}>{row.title}</Typography.Paragraph>
+        <Typography.Link onClick={onClick.bind(this, row)} >
+          <Typography.Paragraph strong={true} className={styles.title}>{row.title}</Typography.Paragraph>        
           <Typography.Text>{row.url}</Typography.Text>
         </Typography.Link>
         <Space className={styles.actions}>
